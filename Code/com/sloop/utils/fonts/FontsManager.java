@@ -34,8 +34,7 @@ public class FontsManager {
 	 * @param context 上下文
 	 * @param root view的父类
 	 * @param fonts 字体文件名称（例如：sloop.ttf 请注意，字体文件必须放在assets/fonts目录下）
-	 * @return 	true表示更换字体成功
-	 * 			false表示更换字体失败（可能是文件名称错误引起的）
+	 * @return 	true表示更换字体成功	false表示更换字体失败（可能是文件名称错误引起的）
 	 */
 	public static boolean changeFonts(Context context, ViewGroup root, String fonts){
 		try {
