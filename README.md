@@ -8,3 +8,5 @@
 		FontsManager.changeFonts(root, this); 
 
 ## 使用前请修改FontsManager中的字体
+
+### 个人建议在每个构建视图的xml文件的根节点都加上一个id，然后直接找都这个id就能一下替换整个页面的字体了。
