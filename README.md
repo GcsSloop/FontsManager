@@ -6,3 +6,5 @@
 		ViewGroup root = (ViewGroup) findViewById(R.id.view_root);
         //更换字体
 		FontsManager.changeFonts(root, this); 
+
+## 使用前请修改FontsManager中的字体
