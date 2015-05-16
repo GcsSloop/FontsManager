@@ -1,14 +1,12 @@
 /**
  * @Title: FontManager.java
- * @Package com.sloop.saomsg.util
- * Copyright: Copyright (c) 2015
+ * @Package com.sloop.saomsg.util Copyright: Copyright (c) 2015
  * 
  * @author sloop
  * @date 2015年3月13日 下午7:14:40
  * @version V1.0
  */
-
-package com.sloop.sao.message.ui.util;
+package com.sloop.utils.fonts;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -19,6 +17,7 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
+
 /**
  * 字体管理器
  * 
@@ -26,31 +25,38 @@ import android.widget.TextView;
  * @author sloop
  * @date 2015年3月13日 下午7:14:40
  */
-
 public class FontsManager {
 
 	/**
-	 * 变更字体
+	 * 更换字体
+	 * 
 	 * @Title: changeFonts
-	 * @param root			view的父类
-	 * @param context 		上下文
-	 * @return void
+	 * @param context 上下文
+	 * @param root view的父类
+	 * @param fonts 字体文件名称（例如：sloop.ttf 请注意，字体文件必须放在assets/fonts目录下）
+	 * @return 	true表示更换字体成功
+	 * 			false表示更换字体失败（可能是文件名称错误引起的）
 	 */
-	public static void changeFonts(ViewGroup root, Context context) {
-		Typeface tf = Typeface.createFromAsset(context.getAssets(), "fonts/sao.ttf");
-		for (int i = 0; i < root.getChildCount(); i++) {
-			View v = root.getChildAt(i);
-			if (v instanceof TextView) {
-				((TextView) v).setTypeface(tf);
-			} else if (v instanceof Button) {
-				((Button) v).setTypeface(tf);
-			} else if (v instanceof Switch) {
-				((Switch) v).setTypeface(tf);
-			} else if (v instanceof EditText) {
-				((EditText) v).setTypeface(tf);
-			} else if (v instanceof ViewGroup) {
-				changeFonts((ViewGroup) v, context);
+	public static boolean changeFonts(Context context, ViewGroup root, String fonts){
+		try {
+			Typeface tf = Typeface.createFromAsset(context.getAssets(), "fonts/" + fonts);
+			for (int i = 0; i < root.getChildCount(); i++) {
+				View v = root.getChildAt(i);
+				if (v instanceof TextView) {
+					((TextView) v).setTypeface(tf);
+				} else if (v instanceof Button) {
+					((Button) v).setTypeface(tf);
+				} else if (v instanceof Switch) {
+					((Switch) v).setTypeface(tf);
+				} else if (v instanceof EditText) {
+					((EditText) v).setTypeface(tf);
+				} else if (v instanceof ViewGroup) {
+					changeFonts(context, (ViewGroup) v, fonts);
+				}
 			}
+			return true;
+		} catch (Exception e) {
+			return false;
 		}
 	}
 }
