@@ -5,11 +5,14 @@
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
 
 ## 调用示例
-        //找到需要修改字体的父类组件
-		ViewGroup root = (ViewGroup) findViewById(R.id.view_root);
-        //更换字体
-		FontsManager.changeFonts(root, this); 
+		final ViewGroup root = (ViewGroup) findViewById(R.id.root);//找到View根节点
+		//执行替换并获得替换结果 括号内参数分别为（上下文，根节点，字体文件名称）
+		boolean isSuccess = FontsManager.changeFonts(MainActivity.this, root, "sao.ttf");
+		if (isSuccess) {
+			Toast.makeText(MainActivity.this, "替换成功", 1).show();
+		} else {
+			Toast.makeText(MainActivity.this, "替换失败", 1).show();
+		}
 
-## 使用前请修改FontsManager中的字体
+## 注意： 字体文件必须放在assets目录下的fonts目录中。
 
-### 个人建议在每个构建视图的xml文件的根节点都加上一个id，然后直接找都这个id就能一下替换整个页面的字体了。
