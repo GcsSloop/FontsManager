@@ -5,14 +5,12 @@
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
 
 ## 调用示例
-		final ViewGroup root = (ViewGroup) findViewById(R.id.root);//找到View根节点
-		//执行替换并获得替换结果 括号内参数分别为（上下文，根节点，字体文件名称）
-		boolean isSuccess = FontsManager.changeFonts(MainActivity.this, root, "sao.ttf");
-		if (isSuccess) {
-			Toast.makeText(MainActivity.this, "替换成功", 1).show();
-		} else {
-			Toast.makeText(MainActivity.this, "替换失败", 1).show();
-		}
-
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		FontsManager.initFormAssets(this, "fonts/sao.ttf");	//初始化
+		FontsManager.changeFonts(this);						//进行替换
+	}
 ## 注意： 字体文件必须放在assets目录下的fonts目录中。
 
