@@ -1,10 +1,11 @@
 /**
  * @Title: FontManager.java
- * @Package com.sloop.saomsg.util Copyright: Copyright (c) 2015
+ * @Package com.sloop.saomsg.util 
+ * @Copyright: Copyright (c) 2015
  * 
  * @author sloop
- * @date 2015年3月13日 下午7:14:40
- * @version V1.0
+ * @date 2015年6月1日 下午10:20:52
+ * @version V1.1
  */
 package com.sloop.utils.fonts;
 
@@ -21,17 +22,25 @@ import android.widget.TextView;
 
 /**
  * 字体管理器
- * 
- * @ClassName: FontManager
- * @author sloop
- * @date 2015年3月13日 下午7:14:40
+ * @ClassName: FontsManager
+ * @author:	 	sloop
+ * @website:	http://www.sloop.icoc.cc
+ * @weibo: 		http://weibo.com/u/5459430586
+ * @date 2015年6月1日 下午10:20:52
  */
 public class FontsManager {
 
+	/** 默认字体 */
 	private static Typeface defaultTypeface = null;
 
 	private FontsManager(){}
 
+	/**
+	 * 初始化
+	 * 
+	 * @Title: init
+	 * @param typeface 字体
+	 */
 	public static void init(Typeface typeface){
 		if (typeface == null) {
 			throw new IllegalStateException("typeface不能为空。");
@@ -40,6 +49,13 @@ public class FontsManager {
 		}
 	}
 
+	/**
+	 * 初始化
+	 * 
+	 * @Title: initFormAssets
+	 * @param context 上下文
+	 * @param fontPath 字体路径
+	 */
 	public static void initFormAssets(Context context, String fontPath){
 		try {
 			defaultTypeface = Typeface.createFromAsset(context.getAssets(), fontPath);
@@ -48,21 +64,24 @@ public class FontsManager {
 		}
 	}
 
+	/**
+	 * 更换字体
+	 * 
+	 * @Title: changeFonts
+	 * @param activity
+	 */
 	public static void changeFonts(Activity activity){
 		if (defaultTypeface == null) {
-			throw new IllegalStateException("必须先使用init()进行初始化");
+			throw new IllegalStateException("必须先使用init()或initFormAssets()进行初始化");
 		}
 		changeFonts((ViewGroup) activity.findViewById(android.R.id.content), defaultTypeface);
 	}
 
 	/**
 	 * 更换字体
-	 * 
 	 * @Title: changeFonts
-	 * @param context 上下文
-	 * @param viewGroup view的父类
-	 * @param fonts 字体文件名称（例如：sloop.ttf 请注意，字体文件必须放在assets/fonts目录下）
-	 * @return true表示更换字体成功 false表示更换字体失败（可能是文件名称错误引起的）
+	 * @param viewGroup
+	 * @param typeface
 	 */
 	public static void changeFonts(ViewGroup viewGroup, Typeface typeface){
 		try {
@@ -79,6 +98,13 @@ public class FontsManager {
 		}
 	}
 
+	/**
+	 * 更换字体
+	 * 
+	 * @Title: changeFonts
+	 * @param view
+	 * @param typeface void
+	 */
 	public static void changeFonts(View view, Typeface typeface){
 		try {
 			if (view instanceof ViewGroup) {
