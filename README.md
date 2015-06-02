@@ -30,3 +30,16 @@
 
 ## 注意： 字体文件放在assets目录下的fonts目录中。
 
+# 使用文档
+### 初始化
+		FontsManager.init(typeface);
+		FontsManager.initFormAssets(activity, "fonts/font.ttf");
+### 改变一个activity的字体
+		FontsManager.changeFonts(activity);
+### 改变一个view的字体
+		FontsManager.changeFonts(view);
+### 改变一个ViewGroup的字体
+		FontsManager.changeFonts(viewGroup);
+
+
+
