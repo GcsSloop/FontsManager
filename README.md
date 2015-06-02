@@ -3,20 +3,18 @@
 
 ### 作者微博: [@安卓攻城师sloop](http://weibo.com/5459430586)
 
-## 使用方法如下:
-#### 初始化： 
+# 使用文档
+### 初始化
+		FontsManager.init(typeface);
+		FontsManager.initFormAssets(activity, "fonts/font.ttf");
+### 改变一个activity的字体
+		FontsManager.changeFonts(activity);
+### 改变一个view的字体
+		FontsManager.changeFonts(view);
+### 改变一个ViewGroup的字体
+		FontsManager.changeFonts(viewGroup);
 
-		FontsManager.init(typeface); 
-		
-		或 FontsManager.initFormAssets(context, "fonts/myfont.ttf"); 
-
-##### 替换activity所有字体
-
-		FontsManager.changeFonts(this);
-
-
-
-## 调用示例
+## 示例
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -30,16 +28,7 @@
 
 ## 注意： 字体文件放在assets目录下的fonts目录中。
 
-# 使用文档
-### 初始化
-		FontsManager.init(typeface);
-		FontsManager.initFormAssets(activity, "fonts/font.ttf");
-### 改变一个activity的字体
-		FontsManager.changeFonts(activity);
-### 改变一个view的字体
-		FontsManager.changeFonts(view);
-### 改变一个ViewGroup的字体
-		FontsManager.changeFonts(viewGroup);
+
 
 
 
