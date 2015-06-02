@@ -1,6 +1,6 @@
 /**
  * @Title: FontManager.java
- * @Package com.sloop.saomsg.util 
+ * @Package com.sloop.saomsg.util
  * @Copyright: Copyright (c) 2015
  * 
  * @author sloop
@@ -22,10 +22,11 @@ import android.widget.TextView;
 
 /**
  * 字体管理器
+ * 
  * @ClassName: FontsManager
- * @author:	 	sloop
- * @website:	http://www.sloop.icoc.cc
- * @weibo: 		http://weibo.com/u/5459430586
+ * @author: sloop
+ * @website: http://www.sloop.icoc.cc
+ * @weibo: http://weibo.com/u/5459430586
  * @date 2015年6月1日 下午10:20:52
  */
 public class FontsManager {
@@ -78,7 +79,32 @@ public class FontsManager {
 	}
 
 	/**
+	 * 更改字体
+	 * @Title: changeFonts
+	 * @param view void
+	 */
+	public static void changeFonts(View view){
+		if (defaultTypeface == null) {
+			throw new IllegalStateException("必须先使用init()或initFormAssets()进行初始化");
+		}
+		changeFonts(view, defaultTypeface);
+	}
+
+	/**
+	 * 更改字体
+	 * @Title: changeFonts
+	 * @param viewGroup void
+	 */
+	public static void changeFonts(ViewGroup viewGroup){
+		if (defaultTypeface == null) {
+			throw new IllegalStateException("必须先使用init()或initFormAssets()进行初始化");
+		}
+		changeFonts(viewGroup, defaultTypeface);
+	}
+
+	/**
 	 * 更换字体
+	 * 
 	 * @Title: changeFonts
 	 * @param viewGroup
 	 * @param typeface
