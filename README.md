@@ -6,7 +6,7 @@
 # 使用文档
 ### 初始化
 		FontsManager.init(typeface);
-		FontsManager.initFormAssets(activity, "fonts/font.ttf");
+		FontsManager.initFormAssets(context, "fonts/font.ttf");
 ### 改变一个activity的字体
 		FontsManager.changeFonts(activity);
 ### 改变一个view的字体
