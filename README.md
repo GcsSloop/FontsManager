@@ -5,8 +5,10 @@
 
 # 使用文档
 ### 初始化
-		FontsManager.init(typeface);
-		FontsManager.initFormAssets(context, "fonts/font.ttf");
+		FontsManager.init(typeface);                             //传入一个typeface初始化
+		FontsManager.initFormAssets(context, "fonts/font.ttf");  //传入上下文和字体包路径（字体文件放在Assets中）
+		FontsManager.initFormFile(fontFile);                     //传入一个字体包文件
+		FontsManager.initFormFile(fontFilePath);                 //传入一个字体包文件路径
 ### 改变一个activity的字体
 		FontsManager.changeFonts(activity);
 ### 改变一个view的字体
@@ -26,7 +28,7 @@
 ## Demo演示
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
 
-## 注意： 字体文件放在assets目录下的fonts目录中。
+
 
 
 
