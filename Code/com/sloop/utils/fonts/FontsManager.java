@@ -9,6 +9,8 @@
  */
 package com.sloop.utils.fonts;
 
+import java.io.File;
+
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Typeface;
@@ -55,13 +57,41 @@ public class FontsManager {
 	 * 
 	 * @Title: initFormAssets
 	 * @param context 上下文
-	 * @param fontPath 字体路径
+	 * @param fontPath Assets中字体包路径
 	 */
 	public static void initFormAssets(Context context, String fontPath){
 		try {
 			defaultTypeface = Typeface.createFromAsset(context.getAssets(), fontPath);
 		} catch (Exception e) {
 			throw new IllegalStateException("初始化失败，请检查fontsPath是否错误");
+		}
+	}
+
+	/**
+	 * 初始化
+	 * 
+	 * @Title: initFormFile
+	 * @param fontPath 字体包存放路径（例如：sdcard/font.ttf）
+	 */
+	public static void initFormFile(String fontPath){
+		try {
+			defaultTypeface = Typeface.createFromFile(fontPath);
+		} catch (Exception e) {
+			throw new IllegalStateException("初始化失败，请检查fontsPath是否错误");
+		}
+	}
+
+	/**
+	 * 初始化
+	 * 
+	 * @Title: initFormFile
+	 * @param fontPath 字体包文件
+	 */
+	public static void initFormFile(File fontFile){
+		try {
+			defaultTypeface = Typeface.createFromFile(fontFile);
+		} catch (Exception e) {
+			throw new IllegalStateException("初始化失败，请检查fontFile是否是字体文件");
 		}
 	}
 
@@ -80,6 +110,7 @@ public class FontsManager {
 
 	/**
 	 * 更改字体
+	 * 
 	 * @Title: changeFonts
 	 * @param view void
 	 */
@@ -92,6 +123,7 @@ public class FontsManager {
 
 	/**
 	 * 更改字体
+	 * 
 	 * @Title: changeFonts
 	 * @param viewGroup void
 	 */
