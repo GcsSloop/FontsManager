@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.sloop.utils.fonts.FontsManager;
 
@@ -21,11 +23,17 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		FontsManager.initFormAssets(this, "fonts/sao.ttf");
-		findViewById(R.id.button).setOnClickListener(new OnClickListener() {
+		//替换一个activity页面
+//		FontsManager.changeFonts(this);
+		View root = findViewById(R.id.root);
+		FontsManager.changeFonts(root);
+		Button button = (Button) findViewById(R.id.button);
+		button.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v){
-				FontsManager.changeFonts(MainActivity.this);
+//				FontsManager.changeFonts(MainActivity.this);
+				Toast.makeText(MainActivity.this, "替换完成", Toast.LENGTH_LONG).show();
 			}
 		});
 	}
