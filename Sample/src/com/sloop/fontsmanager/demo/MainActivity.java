@@ -25,14 +25,15 @@ public class MainActivity extends Activity {
 		FontsManager.initFormAssets(this, "fonts/sao.ttf");
 		//替换一个activity页面
 //		FontsManager.changeFonts(this);
-		View root = findViewById(R.id.root);
-		FontsManager.changeFonts(root);
+		//替换一个view（ViewGroup）
+//		View root = findViewById(R.id.root);
+//		FontsManager.changeFonts(root);
 		Button button = (Button) findViewById(R.id.button);
 		button.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v){
-//				FontsManager.changeFonts(MainActivity.this);
+				FontsManager.changeFonts(MainActivity.this);
 				Toast.makeText(MainActivity.this, "替换完成", Toast.LENGTH_LONG).show();
 			}
 		});
