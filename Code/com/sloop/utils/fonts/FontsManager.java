@@ -14,6 +14,7 @@ import java.io.File;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -32,7 +33,8 @@ import android.widget.TextView;
  * @date 2015年6月1日 下午10:20:52
  */
 public class FontsManager {
-
+	private static final String TAG = "FontsManagerException";
+	private static final String INIT_EXCEPTION = "FontsManager使用该函数前必须先进行初始化";
 	/** 默认字体 */
 	private static Typeface defaultTypeface = null;
 
@@ -46,6 +48,7 @@ public class FontsManager {
 	 */
 	public static void init(Typeface typeface){
 		if (typeface == null) {
+			Log.e(TAG, "typeface不能为空。");
 			throw new IllegalStateException("typeface不能为空。");
 		} else {
 			defaultTypeface = typeface;
@@ -63,6 +66,7 @@ public class FontsManager {
 		try {
 			defaultTypeface = Typeface.createFromAsset(context.getAssets(), fontPath);
 		} catch (Exception e) {
+			Log.e(TAG, "初始化失败，请检查fontsPath是否错误");
 			throw new IllegalStateException("初始化失败，请检查fontsPath是否错误");
 		}
 	}
@@ -77,6 +81,7 @@ public class FontsManager {
 		try {
 			defaultTypeface = Typeface.createFromFile(fontPath);
 		} catch (Exception e) {
+			Log.e(TAG, "初始化失败，请检查fontsPath是否错误");
 			throw new IllegalStateException("初始化失败，请检查fontsPath是否错误");
 		}
 	}
@@ -91,6 +96,7 @@ public class FontsManager {
 		try {
 			defaultTypeface = Typeface.createFromFile(fontFile);
 		} catch (Exception e) {
+			Log.e(TAG, "初始化失败，请检查fontFile是否是字体文件");
 			throw new IllegalStateException("初始化失败，请检查fontFile是否是字体文件");
 		}
 	}
@@ -100,10 +106,12 @@ public class FontsManager {
 	 * 
 	 * @Title: changeFonts
 	 * @param activity
+	 * @throws Exception 
 	 */
-	public static void changeFonts(Activity activity){
+	public static void changeFonts(Activity activity) {
 		if (defaultTypeface == null) {
-			throw new IllegalStateException("必须先使用init()或initFormAssets()进行初始化");
+			Log.e(TAG, INIT_EXCEPTION);
+			throw new IllegalStateException(INIT_EXCEPTION);
 		}
 		changeFonts((ViewGroup) activity.findViewById(android.R.id.content), defaultTypeface);
 	}
@@ -116,7 +124,8 @@ public class FontsManager {
 	 */
 	public static void changeFonts(View view){
 		if (defaultTypeface == null) {
-			throw new IllegalStateException("必须先使用init()或initFormAssets()进行初始化");
+			Log.e(TAG, INIT_EXCEPTION);
+			throw new IllegalStateException(INIT_EXCEPTION);
 		}
 		changeFonts(view, defaultTypeface);
 	}
@@ -129,7 +138,8 @@ public class FontsManager {
 	 */
 	public static void changeFonts(ViewGroup viewGroup){
 		if (defaultTypeface == null) {
-			throw new IllegalStateException("必须先使用init()或initFormAssets()进行初始化");
+			Log.e(TAG, INIT_EXCEPTION);
+			throw new IllegalStateException(INIT_EXCEPTION);
 		}
 		changeFonts(viewGroup, defaultTypeface);
 	}
