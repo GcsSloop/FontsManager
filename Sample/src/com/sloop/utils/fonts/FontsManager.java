@@ -33,10 +33,11 @@ import android.widget.TextView;
  * @date 2015年6月1日 下午10:20:52
  */
 public class FontsManager {
+
 	private static final String TAG = "FontsManagerException";
 	private static final String INIT_EXCEPTION = "FontsManager使用该函数前必须先进行初始化";
 	/** 默认字体 */
-	private static Typeface defaultTypeface = null;
+	public static Typeface defaultTypeface = null;
 
 	private FontsManager(){}
 
@@ -106,13 +107,13 @@ public class FontsManager {
 	 * 
 	 * @Title: changeFonts
 	 * @param activity
-	 * @throws Exception 
 	 */
-	public static void changeFonts(Activity activity) {
+	public static void changeFonts(Activity activity){
 		if (defaultTypeface == null) {
 			Log.e(TAG, INIT_EXCEPTION);
 			throw new IllegalStateException(INIT_EXCEPTION);
 		}
+		ActionBarHelper.changeTitleFonts(activity, defaultTypeface);
 		changeFonts((ViewGroup) activity.findViewById(android.R.id.content), defaultTypeface);
 	}
 
@@ -120,7 +121,7 @@ public class FontsManager {
 	 * 更改字体
 	 * 
 	 * @Title: changeFonts
-	 * @param view void
+	 * @param view
 	 */
 	public static void changeFonts(View view){
 		if (defaultTypeface == null) {
@@ -134,7 +135,7 @@ public class FontsManager {
 	 * 更改字体
 	 * 
 	 * @Title: changeFonts
-	 * @param viewGroup void
+	 * @param viewGroup
 	 */
 	public static void changeFonts(ViewGroup viewGroup){
 		if (defaultTypeface == null) {
@@ -162,6 +163,7 @@ public class FontsManager {
 				}
 			}
 		} catch (Exception e) {
+			Log.e(TAG, e.toString());
 			// TODO
 		}
 	}
@@ -187,8 +189,10 @@ public class FontsManager {
 				((EditText) view).setTypeface(typeface);
 			}
 		} catch (Exception e) {
+			Log.e(TAG, e.toString());
 			// TODO
 		}
 
 	}
+
 }
