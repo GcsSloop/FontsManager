@@ -26,9 +26,13 @@
 	}
 
 # 更新说明
-android_fonts_manager_v1.0.0.jar 实现基本功能：可以替换View ViewGroup Activity字体
-android_fonts_manager_v1.0.1.jar 更新完善报错提示
-android_fonts_manager_v1.2.0.jar 支持修改ActionBar标题字体
+
+		android_fonts_manager_v1.0.0.jar 实现基本功能：可以替换View ViewGroup Activity字体
+		
+		android_fonts_manager_v1.0.1.jar 更新完善报错提示
+		
+		android_fonts_manager_v1.2.0.jar 支持修改ActionBar标题字体
+
 
 ## Demo演示
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
