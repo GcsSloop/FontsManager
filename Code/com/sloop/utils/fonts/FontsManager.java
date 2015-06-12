@@ -5,7 +5,7 @@
  * 
  * @author sloop
  * @date 2015年6月1日 下午10:20:52
- * @version V1.2
+ * @version V1.1
  */
 package com.sloop.utils.fonts;
 
@@ -33,13 +33,15 @@ import android.widget.TextView;
  * @date 2015年6月1日 下午10:20:52
  */
 public class FontsManager {
-	private static final String TAG = "FontsManagerException";
-	private static final String INIT_EXCEPTION = "FontsManager使用该函数前必须先进行初始化";
+
+	public static final String TAG = "FontsManagerException";
+	public static final String INIT_EXCEPTION = "FontsManager使用该函数前必须先进行初始化";
 	/** 默认字体 */
 	public static Typeface defaultTypeface = null;
 
 	private FontsManager(){}
 
+	//----初始化-------------------------------------------------------------------------
 	/**
 	 * 初始化
 	 * 
@@ -101,14 +103,14 @@ public class FontsManager {
 		}
 	}
 
+	//----改变字体-------------------------------------------------------------------------
 	/**
 	 * 更换字体
 	 * 
 	 * @Title: changeFonts
 	 * @param activity
-	 * @throws Exception 
 	 */
-	public static void changeFonts(Activity activity) {
+	public static void changeFonts(Activity activity){
 		if (defaultTypeface == null) {
 			Log.e(TAG, INIT_EXCEPTION);
 			throw new IllegalStateException(INIT_EXCEPTION);
@@ -121,7 +123,7 @@ public class FontsManager {
 	 * 更改字体
 	 * 
 	 * @Title: changeFonts
-	 * @param view void
+	 * @param view
 	 */
 	public static void changeFonts(View view){
 		if (defaultTypeface == null) {
@@ -135,7 +137,7 @@ public class FontsManager {
 	 * 更改字体
 	 * 
 	 * @Title: changeFonts
-	 * @param viewGroup void
+	 * @param viewGroup
 	 */
 	public static void changeFonts(ViewGroup viewGroup){
 		if (defaultTypeface == null) {
@@ -194,6 +196,4 @@ public class FontsManager {
 		}
 
 	}
-	
-
 }
