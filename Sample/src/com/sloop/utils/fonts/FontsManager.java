@@ -34,13 +34,14 @@ import android.widget.TextView;
  */
 public class FontsManager {
 
-	private static final String TAG = "FontsManagerException";
-	private static final String INIT_EXCEPTION = "FontsManager使用该函数前必须先进行初始化";
+	public static final String TAG = "FontsManagerException";
+	public static final String INIT_EXCEPTION = "FontsManager使用该函数前必须先进行初始化";
 	/** 默认字体 */
 	public static Typeface defaultTypeface = null;
 
 	private FontsManager(){}
 
+	//----初始化-------------------------------------------------------------------------
 	/**
 	 * 初始化
 	 * 
@@ -102,6 +103,7 @@ public class FontsManager {
 		}
 	}
 
+	//----改变字体-------------------------------------------------------------------------
 	/**
 	 * 更换字体
 	 * 
@@ -194,5 +196,4 @@ public class FontsManager {
 		}
 
 	}
-
 }

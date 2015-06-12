@@ -9,12 +9,14 @@
 
 package com.sloop.utils.fonts;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.support.v7.app.ActionBarActivity;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.TextPaint;
@@ -30,9 +32,12 @@ import android.util.Log;
  * @date 2015年6月9日 上午1:19:32
  */
 
+@SuppressLint("DefaultLocale")
+@SuppressWarnings("deprecation")
 public class ActionBarHelper {
 
 	private static final String TAG = "ActionBarHelperException";
+	public static final String INIT_EXCEPTION = "使用该函数前必须对FontsManager进行初始化";
 
 	/**
 	 * 改变标题字体
@@ -46,13 +51,10 @@ public class ActionBarHelper {
 			Log.e(TAG, "activity或 typeface等于空!");
 			return;
 		}
-		if (activity instanceof android.support.v7.app.ActionBarActivity) {
+		if (activity instanceof ActionBarActivity) {
 			try {
-				android.support.v7.app.ActionBarActivity actionBarActivity = (android.support.v7.app.ActionBarActivity) activity;
-				android.support.v7.app.ActionBar actionBar = actionBarActivity.getSupportActionBar();
-				SpannableString sp = new SpannableString(actionBar.getTitle());
-				sp.setSpan(new TypefaceSpan(typeface), 0, sp.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-				setTitle(actionBar, sp);
+				android.support.v7.app.ActionBar actionBar = ((ActionBarActivity) activity).getSupportActionBar();
+				setTitle(actionBar, typeface, actionBar.getTitle().toString());
 			} catch (Exception e) {
 				Log.e(TAG, e.toString());
 			}
@@ -60,13 +62,50 @@ public class ActionBarHelper {
 		} else if (activity instanceof Activity) {
 			try {
 				ActionBar actionBar = activity.getActionBar();
-				SpannableString sp = new SpannableString(actionBar.getTitle());
-				sp.setSpan(new TypefaceSpan(typeface), 0, sp.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-				setTitle(actionBar, sp);
+				setTitle(actionBar, typeface, actionBar.getTitle().toString());
 			} catch (Exception e) {
 				Log.e(TAG, e.toString());
 			}
 		}
+	}
+
+	public static void setTitle(Activity activity, Typeface typeface, String title){
+		if (activity instanceof android.support.v7.app.ActionBarActivity) {
+			try {
+				android.support.v7.app.ActionBar actionBar = ((ActionBarActivity) activity).getSupportActionBar();
+				setTitle(actionBar, typeface, title);
+			} catch (Exception e) {
+				Log.e(TAG, e.toString());
+			}
+
+		} else if (activity instanceof Activity) {
+			try {
+				ActionBar actionBar = activity.getActionBar();
+				setTitle(actionBar, typeface, title);
+			} catch (Exception e) {
+				Log.e(TAG, e.toString());
+			}
+		}
+	}
+
+	public static void setTitle(android.support.v7.app.ActionBar actionBar, Typeface typeface, String title){
+		if (typeface == null || actionBar == null) {
+			Log.e(TAG, "typeface或actionbar为空");
+			return;
+		}
+		SpannableString sp = new SpannableString(title);
+		sp.setSpan(new TypefaceSpan(typeface), 0, sp.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+		setTitle(actionBar, sp);
+	}
+
+	public static void setTitle(ActionBar actionBar, Typeface typeface, String title){
+		if (typeface == null || actionBar == null) {
+			Log.e(TAG, "typeface或actionbar为空");
+			return;
+		}
+		SpannableString sp = new SpannableString(title);
+		sp.setSpan(new TypefaceSpan(typeface), 0, sp.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+		setTitle(actionBar, sp);
 	}
 
 	/**
@@ -84,16 +123,6 @@ public class ActionBarHelper {
 		}
 	}
 
-	/**
-	 * 设置标题
-	 * 
-	 * @Title: setTitle
-	 * @param actionBar
-	 * @param charSequence
-	 */
-	public static void setTitle(android.support.v7.app.ActionBar actionBar, CharSequence charSequence){
-		actionBar.setTitle(charSequence.toString());
-	}
 
 	/**
 	 * 设置标题
@@ -111,17 +140,6 @@ public class ActionBarHelper {
 		}
 	}
 
-	/**
-	 * 设置标题
-	 * 
-	 * @Title: setTitle
-	 * @param actionBar
-	 * @param charSequence
-	 */
-	@TargetApi(11)
-	public static void setTitle(ActionBar actionBar, CharSequence charSequence){
-		actionBar.setTitle(charSequence.toString());
-	}
 
 	/**
 	 * 设置字体样式
