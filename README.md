@@ -38,7 +38,7 @@
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
 
 
-
+  
 
 
 
