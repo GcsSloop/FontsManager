@@ -75,7 +75,8 @@ v1.0.0 | 实现替换 View ViewGroup Activity字体
 v1.0.1 | 完善错误提示
 v1.2.0 | 支持替换ActionBar标题字体
 v1.2.1 | 支持Gradle构建 优化部分代码
-v1.2.2 | 修复一个关于ActionBar的问题
+v1.2.2 | 修复ActionBar字体无法自动替换的问题
+v1.2.3 | 修复一个ActionBar相关的BUG
 
 ## Demo演示
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
