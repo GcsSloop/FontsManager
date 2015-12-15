@@ -1,7 +1,7 @@
 # FontsManager
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FontsManager-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1928)
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Maven Central](https://img.shields.io/bintray/v/gcssloop/maven/fontsmanager.svg)](https://maven-badges.herokuapp.com/maven-central/cn.bingoogolapple/bga-refreshlayout)
+[![Maven Central](https://img.shields.io/bintray/v/gcssloop/maven/fontsmanager.svg)](https://bintray.com/gcssloop/maven/fontsmanager/view)
 
 ### 字体管理器，方便快速的为应用内所有组件更换字体。
 
@@ -32,7 +32,7 @@ allprojects {
 #### 2.在Module目录下的build.gradle中添加依赖
 ```
     //fontsmanager
-    compile 'com.sloop.view.fonts:fontsmanager:1.2.1'
+    compile 'com.sloop.view.fonts:fontsmanager:1.2.2'
 ```
 示例：
 ```
@@ -41,7 +41,7 @@ allprojects {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.0.1'
     //fontsmanager
-    compile 'com.sloop.view.fonts:fontsmanager:1.2.1'
+    compile 'com.sloop.view.fonts:fontsmanager:1.2.2'
 }
 ```
 
@@ -75,7 +75,7 @@ v1.0.0 | 实现替换 View ViewGroup Activity字体
 v1.0.1 | 完善错误提示
 v1.2.0 | 支持替换ActionBar标题字体
 v1.2.1 | 支持Gradle构建 优化部分代码
-
+v1.2.2 | 修复一个关于ActionBar的问题
 
 ## Demo演示
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
