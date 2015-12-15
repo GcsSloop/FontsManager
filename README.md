@@ -32,7 +32,7 @@ allprojects {
 #### 2.在Module目录下的build.gradle中添加依赖
 ```
     //fontsmanager
-    compile 'com.sloop.view.fonts:fontsmanager:1.2.2'
+    compile 'com.sloop.view.fonts:fontsmanager:1.2.3'
 ```
 示例：
 ```
@@ -41,7 +41,7 @@ allprojects {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.0.1'
     //fontsmanager
-    compile 'com.sloop.view.fonts:fontsmanager:1.2.2'
+    compile 'com.sloop.view.fonts:fontsmanager:1.2.3'
 }
 ```
 
