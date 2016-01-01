@@ -16,7 +16,7 @@ import android.util.Log;
 /**
  * <ul type="disc">
  * <li>Author: Sloop</li>
- * <li>Version: v1.0.3</li>
+ * <li>Version: v1.0.0</li>
  * <li>Copyright: Copyright (c) 2015</li>
  * <li>Date: 2015/12/15</li>
  * <li><a href="http://www.sloop.icoc.cc"    target="_blank">作者网站</a>      </li>
