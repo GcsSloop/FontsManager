@@ -15,12 +15,12 @@
 # 如何添加
 ### Android Studio
 #### 1.在Project的build.gradle中添加仓库地址
-```
+``` gradle
  //sloop的仓库地址
   maven {url "http://dl.bintray.com/gcssloop/maven"}
 ```
 示例：
-```
+``` gradle
 allprojects {
     repositories {
         jcenter()
@@ -30,13 +30,13 @@ allprojects {
 }
 ```
 #### 2.在Module目录下的build.gradle中添加依赖
-```
+``` gradle
     //fontsmanager
     compile 'com.sloop.view.fonts:fontsmanager:1.2.3'
 ```
 示例：
-```
-  dependencies {
+``` gradle
+dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.0.1'
@@ -47,18 +47,26 @@ allprojects {
 
 # 使用文档
 ### 初始化
-		FontsManager.init(typeface);                     //传入一个typeface初始化
-		FontsManager.initFormAssets(context, fontPath);  //传入上下文和字体包路径（字体文件在Assets中）
-		FontsManager.initFormFile(fontFile);             //传入一个字体包文件
-		FontsManager.initFormFile(fontFilePath);         //传入一个字体包文件路径
+``` java
+	FontsManager.init(typeface);                     //传入一个typeface初始化
+	FontsManager.initFormAssets(context, fontPath);  //传入上下文和字体包路径（字体文件在Assets中）
+	FontsManager.initFormFile(fontFile);             //传入一个字体包文件
+	FontsManager.initFormFile(fontFilePath);         //传入一个字体包文件路径
+```
 ### 改变一个activity的字体
-		FontsManager.changeFonts(activity);
+``` java
+	FontsManager.changeFonts(activity);
+```
 ### 改变一个view的字体
-		FontsManager.changeFonts(view);
+``` java
+	FontsManager.changeFonts(view);
+```
 ### 改变一个ViewGroup的字体
-		FontsManager.changeFonts(viewGroup);
-
+``` java
+	FontsManager.changeFonts(viewGroup);
+```
 ## 示例
+``` java
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
@@ -66,6 +74,7 @@ allprojects {
 		FontsManager.initFormAssets(this, "fonts/sao.ttf");	//初始化
 		FontsManager.changeFonts(this);		                //进行替换
 	}
+```
 
 # 更新说明
 
