@@ -14,8 +14,8 @@
 ## Demo
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
 
-## Usage
-### prepare
+
+## prepare
 
 #### 1.Add this in your Project's build.gradle
 ``` gradle
@@ -48,7 +48,9 @@ dependencies {
 }
 ```
 
-#### 3.initialization the fontsmanager
+## Usage
+
+#### initialization the fontsmanager before use
 ``` java
 	FontsManager.init(typeface);                     //传入一个typeface初始化
 	FontsManager.initFormAssets(context, fontPath);  //传入上下文和字体包路径（字体文件在Assets中）
@@ -56,19 +58,19 @@ dependencies {
 	FontsManager.initFormFile(fontFilePath);         //传入一个字体包文件路径
 ```
 
-### Change Activity font
+#### Change Activity font
 ``` java
 	FontsManager.changeFonts(activity);
 ```
-### Change View font
+#### Change View font
 ``` java
 	FontsManager.changeFonts(view);
 ```
-### Change ViewGroup font
+#### Change ViewGroup font
 ``` java
 	FontsManager.changeFonts(viewGroup);
 ```
-# Complete example
+## Complete example
 ``` java
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -79,20 +81,6 @@ dependencies {
 	}
 ```
 
-# Update Description
-
-版本号 | 更新内容
-  ---  |  ---
-v1.0.0 | 实现替换 View ViewGroup Activity字体
-v1.0.1 | 完善错误提示
-v1.2.0 | 支持替换ActionBar标题字体
-v1.2.1 | 支持Gradle构建 优化部分代码
-v1.2.2 | 修复ActionBar字体无法自动替换的问题
-v1.2.3 | 修复一个ActionBar相关的BUG
-
-
-
-  
 ## About me
 
 [知乎](https://www.zhihu.com/people/li-yu-long-38) | [微博](http://weibo.com/5459430586) | [CSDN](http://blog.csdn.net/u013831257?viewmode=list) | [Github](https://github.com/GcsSloop)
