@@ -87,6 +87,18 @@ You can use any of the following four methods to initialize the FontManager.
 	}
 ```
 
+## Release Notes
+
+Version | Notes
+   ---  |  ---
+ v1.2.3 | Fix a bug with ActionBar
+ v1.2.2 | Fix a bug with ActionBar
+ v1.2.1 | Support Gradle build， Logic Optimization
+ v1.2.0 | Support change ActionBar fonts
+ v1.0.1 | Fix error log
+ v1.0.0 | Support change View ViewGroup Activity's font
+
+
 ## About me
 
 [知乎](https://www.zhihu.com/people/li-yu-long-38) | [微博](http://weibo.com/5459430586) | [CSDN](http://blog.csdn.net/u013831257?viewmode=list) | [Github](https://github.com/GcsSloop)
