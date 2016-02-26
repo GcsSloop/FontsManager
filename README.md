@@ -3,9 +3,14 @@
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Maven Central](https://img.shields.io/bintray/v/gcssloop/maven/fontsmanager.svg)](https://bintray.com/gcssloop/maven/fontsmanager/view)
 
-### 字体管理器，方便快速的为应用内所有组件更换字体。
+## [中文版说明文档戳这里](https://github.com/GcsSloop/AndroidFontsManager/blob/master/README-CN.md)
 
-### 作者微博: [@攻城师sloop](http://weibo.com/5459430586)
+### Android FontsManager, It can help you change the module font easily. 
+
+### Author's weibo: [@攻城师sloop](http://weibo.com/5459430586)
+
+# Demo
+![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
 
 # 更新说明
 ```
@@ -87,8 +92,6 @@ v1.2.1 | 支持Gradle构建 优化部分代码
 v1.2.2 | 修复ActionBar字体无法自动替换的问题
 v1.2.3 | 修复一个ActionBar相关的BUG
 
-## Demo演示
-![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
 
 
   
