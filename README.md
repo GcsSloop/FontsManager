@@ -51,11 +51,17 @@ dependencies {
 ## Usage
 
 #### initialization the fontsmanager before use
+You can use any of the following four methods to initialize the FontManager.
+
 ``` java
-	FontsManager.init(typeface);                     //传入一个typeface初始化
-	FontsManager.initFormAssets(context, fontPath);  //传入上下文和字体包路径（字体文件在Assets中）
-	FontsManager.initFormFile(fontFile);             //传入一个字体包文件
-	FontsManager.initFormFile(fontFilePath);         //传入一个字体包文件路径
+	// NO.1
+	FontsManager.init(typeface);                     // use typeface
+	// NO.2
+	FontsManager.initFormAssets(context, fontPath);  // use context and path（file in Assets）
+	// NO.3
+	FontsManager.initFormFile(fontFile);             // use font file in sdcard
+	// NO.4
+	FontsManager.initFormFile(fontFilePath);         // use font filePath in sdcard
 ```
 
 #### Change Activity font
@@ -76,8 +82,8 @@ dependencies {
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		FontsManager.initFormAssets(this, "fonts/sao.ttf");	//初始化
-		FontsManager.changeFonts(this);		                //进行替换
+		FontsManager.initFormAssets(this, "fonts/sao.ttf");	//initialization
+		FontsManager.changeFonts(this);		                //Change Activity font
 	}
 ```
 
