@@ -5,36 +5,39 @@
 
 ## [中文版说明文档戳这里](https://github.com/GcsSloop/AndroidFontsManager/blob/master/README-CN.md)
 
-### Android FontsManager, It can help you change the module font easily. 
+#### Author's weibo: [@攻城师sloop](http://weibo.com/5459430586)
 
-### Author's weibo: [@攻城师sloop](http://weibo.com/5459430586)
+## Overview
 
-# Demo
+**Android FontsManager, It can help you change the module font easily.**
+
+## Demo
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
 
-# 如何添加
-### Android Studio
-#### 1.在Project的build.gradle中添加仓库地址
+## Usage
+### prepare
+
+#### 1.Add this in your Project's build.gradle
 ``` gradle
- //sloop的仓库地址
+ //sloop's maven
   maven {url "http://dl.bintray.com/gcssloop/maven"}
 ```
-示例：
+Example：
 ``` gradle
 allprojects {
     repositories {
         jcenter()
-        //sloop的仓库地址
+        //sloop's maven
         maven {url "http://dl.bintray.com/gcssloop/maven"}
     }
 }
 ```
-#### 2.在Module目录下的build.gradle中添加依赖
+#### 2.Add this in your Module's build.gradle
 ``` gradle
     //fontsmanager
     compile 'com.sloop.view.fonts:fontsmanager:1.2.3'
 ```
-示例：
+Example：
 ``` gradle
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -45,14 +48,14 @@ dependencies {
 }
 ```
 
-# Usage
-### initialization
+#### 3.initialization the fontsmanager
 ``` java
 	FontsManager.init(typeface);                     //传入一个typeface初始化
 	FontsManager.initFormAssets(context, fontPath);  //传入上下文和字体包路径（字体文件在Assets中）
 	FontsManager.initFormFile(fontFile);             //传入一个字体包文件
 	FontsManager.initFormFile(fontFilePath);         //传入一个字体包文件路径
 ```
+
 ### Change Activity font
 ``` java
 	FontsManager.changeFonts(activity);
