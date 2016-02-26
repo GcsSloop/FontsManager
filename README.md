@@ -15,7 +15,7 @@
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
 
 
-## prepare
+## Prepare
 
 #### 1.Add this in your Project's build.gradle
 ``` gradle
@@ -50,7 +50,7 @@ dependencies {
 
 ## Usage
 
-#### initialization the fontsmanager before use
+#### Initialization the fontsmanager before use
 You can use any of the following four methods to initialize the FontManager.
 
 ``` java
