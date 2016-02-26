@@ -12,11 +12,6 @@
 # Demo
 ![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
 
-# 更新说明
-```
- 在1.2.0(包括1.2.0)之前版本引用Library目录下的jar文件
- 在1.2.1(包括1.2.1)之后版本可以选择直接引用源码或者使用gradle添加依赖的形式加入项目
-```
 # 如何添加
 ### Android Studio
 #### 1.在Project的build.gradle中添加仓库地址
@@ -50,27 +45,27 @@ dependencies {
 }
 ```
 
-# 使用文档
-### 初始化
+# Usage
+### initialization
 ``` java
 	FontsManager.init(typeface);                     //传入一个typeface初始化
 	FontsManager.initFormAssets(context, fontPath);  //传入上下文和字体包路径（字体文件在Assets中）
 	FontsManager.initFormFile(fontFile);             //传入一个字体包文件
 	FontsManager.initFormFile(fontFilePath);         //传入一个字体包文件路径
 ```
-### 改变一个activity的字体
+### Change Activity font
 ``` java
 	FontsManager.changeFonts(activity);
 ```
-### 改变一个view的字体
+### Change View font
 ``` java
 	FontsManager.changeFonts(view);
 ```
-### 改变一个ViewGroup的字体
+### Change ViewGroup font
 ``` java
 	FontsManager.changeFonts(viewGroup);
 ```
-## 示例
+# Complete example
 ``` java
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -81,7 +76,7 @@ dependencies {
 	}
 ```
 
-# 更新说明
+# Update Description
 
 版本号 | 更新内容
   ---  |  ---
@@ -95,7 +90,7 @@ v1.2.3 | 修复一个ActionBar相关的BUG
 
 
   
-## 我的相关链接
+## About me
 
 [知乎](https://www.zhihu.com/people/li-yu-long-38) | [微博](http://weibo.com/5459430586) | [CSDN](http://blog.csdn.net/u013831257?viewmode=list) | [Github](https://github.com/GcsSloop)
  --- | --- | --- | ---
