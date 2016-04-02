@@ -74,7 +74,7 @@ You can use any of the following four methods to initialize the FontManager.
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		FontsManager.initFormAssets(this, "fonts/sao.ttf");	//initialization
+		FontsManager.initFormAssets(this, "sao.ttf");		//initialization
 		FontsManager.changeFonts(this);		                //Change Activity font
 	}
 ```
