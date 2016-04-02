@@ -2,48 +2,33 @@
 # FontsManager
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FontsManager-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1928)
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Maven Central](https://img.shields.io/bintray/v/gcssloop/maven/fontsmanager.svg)](https://bintray.com/gcssloop/maven/fontsmanager/view)
+[![](https://jitpack.io/v/GcsSloop/FontsManager.svg)](https://jitpack.io/#GcsSloop/FontsManager)
 
 ### 字体管理器，方便快速的为应用内所有组件更换字体。
 
-### 作者微博: [@攻城师sloop](http://weibo.com/5459430586)
+### 作者微博: [@GcsSloop](http://weibo.com/GcsSloop)
 
-# 更新说明
-```
- 在1.2.0(包括1.2.0)之前版本引用Library目录下的jar文件
- 在1.2.1(包括1.2.1)之后版本可以选择直接引用源码或者使用gradle添加依赖的形式加入项目
-```
-# 如何添加
-### Android Studio
+## Demo演示
+![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
+
+## 如何添加
+
 #### 1.在Project的build.gradle中添加仓库地址
+
 ``` gradle
- //sloop的仓库地址
-  maven {url "http://dl.bintray.com/gcssloop/maven"}
+	allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}
 ```
-示例：
-``` gradle
-allprojects {
-    repositories {
-        jcenter()
-        //sloop的仓库地址
-        maven {url "http://dl.bintray.com/gcssloop/maven"}
-    }
-}
-```
+
 #### 2.在Module目录下的build.gradle中添加依赖
 ``` gradle
-    //fontsmanager
-    compile 'com.sloop.view.fonts:fontsmanager:1.2.3'
-```
-示例：
-``` gradle
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.0.1'
-    //fontsmanager
-    compile 'com.sloop.view.fonts:fontsmanager:1.2.3'
-}
+	dependencies {
+	        compile 'com.github.GcsSloop:FontsManager:v1.0.0'
+	}
 ```
 
 # 使用文档
@@ -81,23 +66,35 @@ dependencies {
 
 版本号 | 更新内容
   ---  |  ---
-v1.0.0 | 实现替换 View ViewGroup Activity字体
-v1.0.1 | 完善错误提示
-v1.2.0 | 支持替换ActionBar标题字体
-v1.2.1 | 支持Gradle构建 优化部分代码
-v1.2.2 | 修复ActionBar字体无法自动替换的问题
-v1.2.3 | 修复一个ActionBar相关的BUG
-
-## Demo演示
-![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
+v1.0.0 | 从 Bintray 迁移到 JitPack。
 
 
-  
-## 我的相关链接
 
-[知乎](https://www.zhihu.com/people/li-yu-long-38) | [微博](http://weibo.com/5459430586) | [CSDN](http://blog.csdn.net/u013831257?viewmode=list) | [Github](https://github.com/GcsSloop)
- --- | --- | --- | ---
-![](http://ww2.sinaimg.cn/mw690/005Xtdi2gw1f12thhjxn0j30810b4dhe.jpg) | ![](http://ww2.sinaimg.cn/mw690/005Xtdi2gw1f12t31cqbtj30b40b4gnp.jpg) | ![](http://ww2.sinaimg.cn/mw690/005Xtdi2gw1f12t3d4rnvj30b40b4jti.jpg) | ![](http://ww4.sinaimg.cn/mw690/005Xtdi2gw1f12t3mosq5j30b40b40tr.jpg)
+## About Me
+### 作者微博: [@GcsSloop](http://weibo.com/GcsSloop)
+
+<a href="https://github.com/GcsSloop/SloopBlog/blob/master/FINDME.md" target="_blank"> <img src="http://ww4.sinaimg.cn/large/005Xtdi2gw1f1qn89ihu3j315o0dwwjc.jpg" width=300 height=100 /> </a>
+
+
+# 开源协议
+```
+Copyright (c) 2015 GcsSloop
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
+
+
 
 
 
