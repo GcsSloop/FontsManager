@@ -12,7 +12,7 @@
 **Android FontsManager, It can help you change the module font easily.**
 
 ## Demo
-![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
+![](http://ww4.sinaimg.cn/large/005Xtdi2jw1f2ip77q8ydg306j0b4jry.gif)
 
 
 ## Prepare
