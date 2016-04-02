@@ -9,7 +9,7 @@
 ### 作者微博: [@GcsSloop](http://weibo.com/GcsSloop)
 
 ## Demo演示
-![fontsmanagerpic](https://github.com/GcsSloop/AndroidFontsManager/blob/master/Pic/fontsmanagerdemo.gif)
+![](http://ww4.sinaimg.cn/large/005Xtdi2jw1f2ip77q8ydg306j0b4jry.gif)
 
 ## 如何添加
 
