@@ -1,15 +1,15 @@
 # FontsManager
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FontsManager-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1928)
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-[![Maven Central](https://img.shields.io/bintray/v/gcssloop/maven/fontsmanager.svg)](https://bintray.com/gcssloop/maven/fontsmanager/view)
+[![](https://jitpack.io/v/GcsSloop/FontsManager.svg)](https://jitpack.io/#GcsSloop/FontsManager)
 
 ## [中文版说明文档戳这里](https://github.com/GcsSloop/AndroidFontsManager/blob/master/README-CN.md)
 
-#### Author's weibo: [@攻城师sloop](http://weibo.com/5459430586)
+#### Author's weibo: [@GcsSloop](http://weibo.com/GcsSloop)
 
 ## Overview
 
-**Android FontsManager, It can help you change the module font easily.**
+**Android FontsManager： It can help you change font of view easily !**
 
 ## Demo
 ![](http://ww4.sinaimg.cn/large/005Xtdi2jw1f2ip77q8ydg306j0b4jry.gif)
@@ -17,36 +17,28 @@
 
 ## Prepare
 
-#### 1.Add this in your Project's build.gradle
+#### Step 1. Add the JitPack repository to your build file
+
+Add it in your root build.gradle at the end of repositories:
+
 ``` gradle
- //sloop's maven
-  maven {url "http://dl.bintray.com/gcssloop/maven"}
+	allprojects {
+		repositories {
+			...
+			maven { url "https://jitpack.io" }
+		}
+	}
 ```
-Example：
+
+#### Step 2. Add the dependency
+
 ``` gradle
-allprojects {
-    repositories {
-        jcenter()
-        //sloop's maven
-        maven {url "http://dl.bintray.com/gcssloop/maven"}
-    }
-}
+	dependencies {
+	        compile 'com.github.GcsSloop:FontsManager:v1.0.0'
+	}
 ```
-#### 2.Add this in your Module's build.gradle
-``` gradle
-    //fontsmanager
-    compile 'com.sloop.view.fonts:fontsmanager:1.2.3'
-```
-Example：
-``` gradle
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.0.1'
-    //fontsmanager
-    compile 'com.sloop.view.fonts:fontsmanager:1.2.3'
-}
-```
+
+> ### if you use Maven, [Click Here](https://jitpack.io/#GcsSloop/FontsManager/)
 
 ## Usage
 
@@ -91,12 +83,7 @@ You can use any of the following four methods to initialize the FontManager.
 
 Version | Notes
    ---  |  ---
- v1.2.3 | Fix a bug with ActionBar
- v1.2.2 | Fix a bug with ActionBar
- v1.2.1 | Support Gradle build， Logic Optimization
- v1.2.0 | Support change ActionBar fonts
- v1.0.1 | Fix error log
- v1.0.0 | Support change View ViewGroup Activity's font
+ v1.0.0 | From bintray to JitPack.
 
 
 ## About Me
