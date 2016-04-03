@@ -39,6 +39,9 @@
 	FontsManager.initFormFile(fontFile);             //传入一个字体包文件
 	FontsManager.initFormFile(fontFilePath);         //传入一个字体包文件路径
 ```
+
+**PS: 初始化方式任选其一即可，并且初始化函数只需要调用一次，**
+
 ### 改变一个activity的字体
 ``` java
 	FontsManager.changeFonts(activity);
