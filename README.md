@@ -3,6 +3,8 @@
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![](https://jitpack.io/v/GcsSloop/FontsManager.svg)](https://jitpack.io/#GcsSloop/FontsManager)
 
+一行代码，帮助你快速为各种View替换字体。
+
 ## [中文版说明文档戳这里](https://github.com/GcsSloop/AndroidFontsManager/blob/master/README-CN.md)
 
 #### Author's weibo: [@GcsSloop](http://weibo.com/GcsSloop)
