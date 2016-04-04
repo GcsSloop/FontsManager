@@ -33,6 +33,9 @@
 
 # 使用文档
 ### 初始化
+
+**PS: 初始化方式任选其一即可，并且初始化函数只需要调用一次。**
+
 ``` java
 	FontsManager.init(typeface);                     //传入一个typeface初始化
 	FontsManager.initFormAssets(context, fontPath);  //传入上下文和字体包路径（字体文件在Assets中）
@@ -40,7 +43,7 @@
 	FontsManager.initFormFile(fontFilePath);         //传入一个字体包文件路径
 ```
 
-**PS: 初始化方式任选其一即可，并且初始化函数只需要调用一次，**
+
 
 ### 改变一个activity的字体
 ``` java
