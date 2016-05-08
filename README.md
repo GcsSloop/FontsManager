@@ -1,7 +1,9 @@
 # <img src="http://ww3.sinaimg.cn/large/005Xtdi2jw1f2jr4jwwodj3074074q34.jpg" width=32 /> FontsManager
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FontsManager-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1928)
+
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+![](https://img.shields.io/badge/Support-7%2B-green.svg)
 [![](https://jitpack.io/v/GcsSloop/FontsManager.svg)](https://jitpack.io/#GcsSloop/FontsManager)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FontsManager-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1928)
 
 **一行代码，帮助你快速为各种View替换字体。**
 
