@@ -6,6 +6,8 @@
 [![](https://jitpack.io/v/GcsSloop/FontsManager.svg)](https://jitpack.io/#GcsSloop/FontsManager)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FontsManager-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1928)
 
+## [English Readme please cilick here](https://github.com/GcsSloop/FontsManager/blob/master/README-EN.md)
+
 ### 字体管理器，方便快速的为应用内所有组件更换字体。
 
 ### 作者微博: [@GcsSloop](http://weibo.com/GcsSloop)
